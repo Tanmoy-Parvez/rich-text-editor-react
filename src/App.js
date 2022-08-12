@@ -1,18 +1,14 @@
-import logo from './logo.svg';
-import daisyui from './daisyui-logo.svg';
+import { useState } from 'react';
 import './App.css';
+import RichTextEditor from './RichTextEditor';
 
 function App() {
+  const [value, setValue] = useState("")
   return (
     <>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        +
-        <img src={daisyui} className="" alt="logo" />
-        <p>
-          React.JS + Tailwind CSS + DaisyUI Configuration Template.
-        </p>
-      </header>
+      <RichTextEditor setValue={setValue} />
+      <br />
+      <p>{value}</p>
     </>
   );
 }
